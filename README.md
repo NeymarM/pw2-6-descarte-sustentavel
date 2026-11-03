@@ -15,13 +15,13 @@ gantt
     title Cronograma de Execução: Spring Boot + SQL Server (8 Horas Totais)
     dateFormat  DD/MM
     section Sprint Backend
-    Script SQL Server, Conexão e JPA       :done, 09/11, 1d
-    Controller REST e Operações Básicas    :active, 16/11, 1d
-    Regras de Negócio e Validações:crit, 23/11, 1d
-    Tratamento de Exceções & Testes Finais :crit, 30/11, 1d
+    Script SQL Server, Conexão e JPA       :done, 04/11, 1d
+    Controller REST e Operações Básicas    :active, 18/11, 1d
+    Regras de Negócio e Validações:crit, 25/11, 1d
+    Tratamento de Exceções & Testes Finais :crit, 02/12, 1d
 ```
 
-### Aula 1 — 09/11: Script SQL Server, Conexão e Mapeamento JPA
+### Aula 1 — 04/11: Script SQL Server, Conexão e Mapeamento JPA
 * **Objetivo:** Criar a tabela no Microsoft SQL Server via script DDL, configurar o Spring Boot para conectar ao SQL Server e mapear a `@Entity` correspondente.
 * **Entregáveis:**
   * **Script DDL SQL Server (`schema.sql`):** Criação da tabela com tipos nativos do SQL Server (`BIGINT IDENTITY(1,1)`, `VARCHAR`, `DATETIME2`, `BIT`, `DECIMAL`), chaves primárias e restrições `NOT NULL`.
@@ -31,7 +31,7 @@ gantt
   * Interface `Repository` estendendo `JpaRepository<Entidade, Long>`.
   * Aplicação iniciando com conexão estabelecida e validada com o SQL Server.
 
-### Aula 2 — 16/11: Camada Web e Operações CRUD Básicas
+### Aula 2 — 18/11: Camada Web e Operações CRUD Básicas
 * **Objetivo:** Implementar o `@RestController` e expor as operações fundamentais de leitura, inserção e remoção integradas ao SQL Server.
 * **Entregáveis:**
   * Classe `@RestController` com anotação `@RequestMapping("/api/...")`.
@@ -41,13 +41,13 @@ gantt
   * Endpoint `DELETE /{id}` com retorno `HttpStatus.NO_CONTENT`.
   * Coleção de requisições criada e validada no Postman, Insomnia ou Bruno.
 
-### Aula 3 — 23/11: Regras de Negócio
+### Aula 3 — 25/11: Regras de Negócio
 * **Objetivo:** Implementação da regra central do tema.
 * **Entregáveis:**
   * Implementação da **Regra de Negócio** (cálculos automáticos, validações lógicas e transições de status).
   * Endpoint específico exposto no Controller (`PATCH` ou `POST` de ação) invocando a regra de negócio.
 
-### Aula 4 — 30/11: Validações, Tratamento de Erros e Homologação
+### Aula 4 — 02/12: Validações, Tratamento de Erros e Homologação
 * **Objetivo:** Implementar validações e finalizar os testes integrados.
 * **Entregáveis:**
   * Validações de entrada na requisição (`NotNull`, `NotBlank`, `Min`, `Max`, etc).
